@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FindingARectangleFromCoordinates.Date;
+using FindingARectangleFromCoordinates.UI;
+using System;
+using System.Collections.Generic;
 
 namespace FindingARectangleFromCoordinates
 {
@@ -6,7 +9,9 @@ namespace FindingARectangleFromCoordinates
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            CoordinateSystemUI UI = new CoordinateSystemUI();
+            List<Coordinate> coordinates = UI.GetTestСoordinates();
+            UI.ShowInformationRectangles(new CoordinateSystem().FindRectangles(coordinates), coordinates);
         }
     }
 }
